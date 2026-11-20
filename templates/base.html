@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {% block title %}Personal Engineering Portfolio{% endblock %}
+    </title>
+
+    <meta
+        name="description"
+        content="{% block description %}Engineering notes, projects, research and personal work.{% endblock %}"
+    >
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body class="{% if page == 'home' %}home-page{% endif %}">
+
+    <header class="site-header">
+        <div class="header-inner">
+
+            <a href="/" class="site-name">
+                Juma
+            </a>
+
+            <nav class="site-nav" aria-label="Main navigation">
+                <a href="/" {% if page == "home" %}aria-current="page"{% endif %}>Home</a>
+
+                <a href="/journal/" {% if page == "journal" %}aria-current="page"{% endif %}>Journal</a>
+
+                <a href="/projects/" {% if page == "projects" %}aria-current="page"{% endif %}>Projects</a>
+
+                <a href="/research/" {% if page == "research" %}aria-current="page"{% endif %}>Research</a>
+
+                <a href="/about/" {% if page == "about" %}aria-current="page"{% endif %}>About</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main id="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+
+            <p>
+                <span>Juma</span>
+                <span>Personal engineering record</span>
+            </p>
+
+            <p>
+                &copy; {{ current_year }}
+            </p>
+
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+</html>

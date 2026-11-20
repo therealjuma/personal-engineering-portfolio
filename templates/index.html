@@ -1,0 +1,215 @@
+
+{% extends "base.html" %}
+
+{% block title %}Juma | Engineering, Systems & Research{% endblock %}
+
+{% block description %}
+A personal archive of engineering projects, research, technical notes and ongoing study.
+{% endblock %}
+
+{% block content %}
+
+<div class="search-home">
+
+    <!-- Search header -->
+    <section class="search-header">
+
+        <a href="/" class="search-brand" aria-label="Home">
+            Juma
+        </a>
+
+        <form class="search-form" id="site-search">
+            <input
+                type="search"
+                id="search-input"
+                name="q"
+                placeholder="Search projects, journal, research..."
+                autocomplete="off"
+                aria-label="Search this website"
+            >
+
+            <button type="submit" aria-label="Search">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M10.5 3a7.5 7.5 0 1 0 4.6 13.4l4.2 4.2 1.4-1.4-4.2-4.2A7.5 7.5 0 0 0 10.5 3Zm0 2a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11Z"/>
+                </svg>
+            </button>
+        </form>
+
+    </section>
+
+
+    <!-- Search categories -->
+    <nav class="search-tabs" aria-label="Explore archive">
+
+        <a href="/" class="tab active">All</a>
+        <a href="/projects/" class="tab">Projects</a>
+        <a href="/journal/" class="tab">Journal</a>
+        <a href="/research/" class="tab">Research</a>
+        <a href="/about/" class="tab">About</a>
+
+    </nav>
+
+
+    <!-- Main content -->
+    <section class="search-content">
+
+        <div class="search-results-column">
+
+            <div class="archive-introduction search-item"
+                 data-search="engineering systems software python databases artificial intelligence mathematics supply chain procurement logistics research projects journal">
+
+                <p class="result-source">PERSONAL ARCHIVE</p>
+
+                <h1>Engineering, systems &amp; research</h1>
+
+                <p class="result-description">
+                    A record of projects, technical study, notes and investigations
+                    across software, artificial intelligence, mathematics and
+                    operational systems.
+                </p>
+
+            </div>
+
+
+            <!-- Projects -->
+            <article class="search-result search-item"
+                     data-search="projects software engineering python backend systems applications development supply chain inventory logistics">
+
+                <p class="result-source">PROJECT ARCHIVE</p>
+
+                <h2>
+                    <a href="/projects/">Projects</a>
+                </h2>
+
+                <p class="result-description">
+                    Software and systems under development. Project documentation
+                    will cover the problem, design, implementation, decisions
+                    and challenges encountered.
+                </p>
+
+                <a class="result-url" href="/projects/">/projects/</a>
+
+            </article>
+
+
+            <!-- Journal -->
+            <article class="search-result search-item"
+                     data-search="journal technical notes engineering mathematics python sql database algorithms concepts explanations experiments learning">
+
+                <p class="result-source">ENGINEERING NOTES</p>
+
+                <h2>
+                    <a href="/journal/">Journal</a>
+                </h2>
+
+                <p class="result-description">
+                    Technical explanations, mathematical reasoning,
+                    engineering notes, implementation decisions,
+                    experiments and lessons from building.
+                </p>
+
+                <a class="result-url" href="/journal/">/journal/</a>
+
+            </article>
+
+
+            <!-- Research -->
+            <article class="search-result search-item"
+                     data-search="research technology economics technological transformation artificial intelligence systems supply chains industry automation analysis">
+
+                <p class="result-source">INVESTIGATION &amp; ANALYSIS</p>
+
+                <h2>
+                    <a href="/research/">Research</a>
+                </h2>
+
+                <p class="result-description">
+                    Longer investigations into technology, economic transformation,
+                    AI, supply chains, engineering and systems.
+                </p>
+
+                <a class="result-url" href="/research/">/research/</a>
+
+            </article>
+
+
+            <!-- About -->
+            <article class="search-result search-item"
+                     data-search="about Juma procurement supply chain Egerton University operations inventory logistics professional background engineering career transition">
+
+                <p class="result-source">BACKGROUND</p>
+
+                <h2>
+                    <a href="/about/">About</a>
+                </h2>
+
+                <p class="result-description">
+                    Procurement and supply chain background, operational experience,
+                    technical interests and current direction toward engineering.
+                </p>
+
+                <a class="result-url" href="/about/">/about/</a>
+
+            </article>
+
+
+            <p class="no-results" id="no-results" hidden>
+                No matching entries found.
+            </p>
+
+        </div>
+
+
+        <!-- Knowledge panel -->
+        <aside class="archive-panel">
+
+            <div class="panel-heading">
+                <h2>Juma</h2>
+                <p>Engineering · Operations · Systems</p>
+            </div>
+
+            <div class="panel-body">
+
+                <p>
+                    Background in procurement and supply chain management,
+                    currently developing technical competence in software,
+                    data systems and artificial intelligence.
+                </p>
+
+                <dl>
+                    <div>
+                        <dt>Education</dt>
+                        <dd>Procurement &amp; Supply Chain Management</dd>
+                    </div>
+
+                    <div>
+                        <dt>Institution</dt>
+                        <dd>Egerton University</dd>
+                    </div>
+
+                    <div>
+                        <dt>Working interests</dt>
+                        <dd>Software · Data · AI · Systems</dd>
+                    </div>
+
+                    <div>
+                        <dt>Domain interests</dt>
+                        <dd>Supply chains · Operations · Economics</dd>
+                    </div>
+                </dl>
+
+                <a href="/about/" class="panel-link">More about me →</a>
+
+            </div>
+
+        </aside>
+
+    </section>
+
+
+    <!-- Search status -->
+    <p class="search-status" id="search-status" aria-live="polite"></p>
+
+</div>
+
+{% endblock %}
